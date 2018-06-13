@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="7" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
             <choice>
@@ -8,6 +9,7 @@
                 <element label="Facilities" sequence="1" value="facilities"/>
                 <element label="Legal" sequence="2" value="legal"/>
                 <element label="F&amp;A" sequence="3" value="fa"/>
+                <element label="Other" sequence="4" value="other"/>
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" choice="3" default="legal 1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
@@ -20,6 +22,7 @@
                 <element label="Legal 2" sequence="5" value="legal 2"/>
                 <element label="F&amp;A1" sequence="6" value="f&amp;a1"/>
                 <element label="F&amp;A2" sequence="7" value="f&amp;a2"/>
+                <element label="Other" sequence="8" value="other"/>
             </choice>
         </element>
         <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
